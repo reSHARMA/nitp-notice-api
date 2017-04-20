@@ -34,6 +34,7 @@ res.setHeader('Content-Type', 'application/json');
 res.send(JSON.stringify(d)); 
 })
 })
-app.listen('8082')
-console.log('Magic happens on port 8082');
+var port = process.env.PORT || 3000;
+app.listen(port)
+console.log('listening on port '+port);
 exports = module.exports = app;
