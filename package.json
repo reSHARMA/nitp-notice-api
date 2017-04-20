@@ -4,8 +4,8 @@
   "description": "NIT-P web scrapper and API",
   "main": "index.js",
   "scripts": {
-    "test": "test.js"
-  },
+    "start": "node index.js"
+},
   "author": "Reshabh Sharma",
   "license": "ISC",
   "dependencies": {
