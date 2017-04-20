@@ -12,6 +12,7 @@
     "cheerio": "latest",
     "cors": "^2.8.3",
     "express": "latest",
+    "jsonfile": "^2.4.0",
     "request": "latest"
   }
 }
