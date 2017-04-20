@@ -1,0 +1,17 @@
+{
+  "name": "nitp-data",
+  "version": "1.0.0",
+  "description": "NIT-P web scrapper and API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Reshabh Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "latest",
+    "cors": "^2.8.3",
+    "express": "latest",
+    "request": "latest"
+  }
+}
