@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var app     = express();
 var cors = require('cors'); 
 app.use(cors());
-app.get('/data', function(req, res){
+app.get('/', function(req, res){
     var d= { };
     c = 1;
     url = 'http://www.nitp.ac.in/php/notice.php?table=registrar';
