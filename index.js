@@ -9,18 +9,14 @@ var file = './data.json';
 var old;
 app.use(cors());
 
-function compare_json(j1) {
-    read_data();
-    console.log(old);
-    return (j1 === JSON.stringify(old));
-}
-
 function fetch_from_nitp() {
     console.log("fetching data from nitp.ac.in...");
     var d = {};
 
-app.get('/', function(req, res){
+
     var d= { };
+
+
     c = 1;
     url = 'http://www.nitp.ac.in/php/notice.php?table=registrar';
     request(url, function(error, response, html) {
@@ -81,7 +77,7 @@ setInterval(function() {
     fetch_from_nitp();
 }, the_interval);
 
-app.get('/data', function(req, res) {
+app.get('/', function(req, res) {
     fetch_from_nitp();
     res.setHeader('Content-Type', 'application/json');
     jsonfile.readFile(file, function(err, obj) {
@@ -93,13 +89,5 @@ app.get('/data', function(req, res) {
 var port = process.env.PORT || 3000;
 app.listen(port)
 console.log('listening on port '+port);
-exports = module.exports = app;
 
-res.setHeader('Content-Type', 'application/json');
-res.send(JSON.stringify(d)); 
-})
-})
-var port = process.env.PORT || 3000;
-app.listen(port)
-console.log('listening on port '+port);
 exports = module.exports = app;
