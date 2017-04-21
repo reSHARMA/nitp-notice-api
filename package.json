@@ -1,11 +1,11 @@
 {
   "name": "nitp-data",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NIT-P web scrapper and API",
   "main": "index.js",
   "scripts": {
-    "test": "test.js"
-  },
+    "start": "node index.js"
+},
   "author": "Reshabh Sharma",
   "license": "ISC",
   "dependencies": {

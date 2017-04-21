@@ -18,6 +18,13 @@ function compare_json(j1) {
 function fetch_from_nitp() {
     console.log("fetching data from nitp.ac.in...");
     var d = {};
+<<<<<<< HEAD
+=======
+
+app.get('/', function(req, res){
+    var d= { };
+
+>>>>>>> 35ec1f9a296443b8b7b304a5ce8b497414769500
     c = 1;
     url = 'http://www.nitp.ac.in/php/notice.php?table=registrar';
     request(url, function(error, response, html) {
@@ -90,4 +97,16 @@ app.get('/data', function(req, res) {
 var port = process.env.PORT || 3000;
 app.listen(port)
 console.log('listening on port '+port);
+<<<<<<< HEAD
+=======
+exports = module.exports = app;
+
+res.setHeader('Content-Type', 'application/json');
+res.send(JSON.stringify(d)); 
+})
+})
+var port = process.env.PORT || 3000;
+app.listen(port)
+console.log('listening on port '+port);
+>>>>>>> 35ec1f9a296443b8b7b304a5ce8b497414769500
 exports = module.exports = app;
