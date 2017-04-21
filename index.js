@@ -50,7 +50,7 @@ function fetch_from_nitp() {
                 }
                 j2 = data;
                      
-            if (JSON.stringify(j1) !== j2) {
+            if (JSON.stringify(j1) !== j2!= undefined) {
                 console.log("new data found , uploading ...");
                 write_data(JSON.stringify(j1));
             } else console.log("no new data");
