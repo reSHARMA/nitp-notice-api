@@ -1,6 +1,6 @@
 {
   "name": "nitp-data",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NIT-P web scrapper and API",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "cheerio": "latest",
     "cors": "^2.8.3",
     "express": "latest",
+    "jsonfile": "^2.4.0",
     "request": "latest"
   }
 }

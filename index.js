@@ -9,7 +9,6 @@ var file = './data.json';
 var old;
 app.use(cors());
 
-
 function compare_json(j1) {
     read_data();
     console.log(old);
@@ -22,6 +21,7 @@ function fetch_from_nitp() {
 
 app.get('/', function(req, res){
     var d= { };
+
     c = 1;
     url = 'http://www.nitp.ac.in/php/notice.php?table=registrar';
     request(url, function(error, response, html) {
@@ -73,7 +73,6 @@ function write_data(obj) {
             return console.log(err);
         }
 
-
         console.log("The file was saved!");
     });
 }
@@ -105,4 +104,3 @@ var port = process.env.PORT || 3000;
 app.listen(port)
 console.log('listening on port '+port);
 exports = module.exports = app;
-
