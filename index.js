@@ -11,9 +11,7 @@ app.use(cors());
 
 function fetch_from_nitp() {
     console.log("fetching data from nitp.ac.in...");
-    var d = {};
-
-
+   
     var d= { };
 
 
@@ -71,7 +69,7 @@ function write_data(obj) {
         console.log("The file was saved!");
     });
 }
-var minutes = .2,
+var minutes = 2,
     the_interval = minutes * 60 * 1000;
 setInterval(function() {
     fetch_from_nitp();
