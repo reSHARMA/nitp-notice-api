@@ -50,7 +50,7 @@ function fetch_from_nitp() {
                 }
                 j2 = data;
                      
-            if (JSON.stringify(j1) !== j2!= undefined) {
+            if (JSON.stringify(j1) !== j2 && j2!= undefined) {
                 console.log("new data found , uploading ...");
                 write_data(JSON.stringify(j1));
             } else console.log("no new data");
@@ -71,7 +71,7 @@ function write_data(obj) {
         console.log("The file was saved!");
     });
 }
-var minutes = 10,
+var minutes = .2,
     the_interval = minutes * 60 * 1000;
 setInterval(function() {
     fetch_from_nitp();
