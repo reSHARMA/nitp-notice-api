@@ -69,14 +69,14 @@ function write_data(obj) {
         console.log("The file was saved!");
     });
 }
-var minutes = 2,
+var minutes = 60,
     the_interval = minutes * 60 * 1000;
 setInterval(function() {
     fetch_from_nitp();
 }, the_interval);
-fetch_from_nitp();
+
 app.get('/', function(req, res) {
-  
+    fetch_from_nitp();
     res.setHeader('Content-Type', 'application/json');
     jsonfile.readFile(file, function(err, obj) {
         console.log("error_read deploy " + err);
